@@ -139,8 +139,38 @@
         .company-logo:hover {
             opacity: 1;
         }
+                
+        .announcement-banner {
+            width: 100%;
+            background-color: #bb9af7; /* same purple as your links */
+            color: #0b0b0b;
+            padding: 0.75rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        .announcement-banner a {
+            color: #0b0b0b;
+            font-weight: 500;
+            text-decoration: underline;
+            transition: color 150ms linear, text-decoration-color 150ms linear;
+            white-space: nowrap;
+        }
+        
+        .announcement-banner a:hover {
+            color: #1f2933;
+            text-decoration: none;
+        }
         
         @media (max-width: 600px) {
+            .announcement-banner {
+                flex-direction: column;
+                padding: 0.75rem;
+            }
             .container {
                 width: 90%;
                 padding: 3rem 0;
@@ -166,6 +196,12 @@
     </style>
 </head>
 <body>
+    <div class="announcement-banner">
+        <span>Taking MCP Further: Runebook is joining Keycard.</span>
+        <a href="https://blog.runebook.ai/taking-mcp-further-runebook-is-joining-keycard/" target="_blank" rel="noopener noreferrer">
+            Read the announcement →
+        </a>
+    </div>
     <div class="container">
         <div class="logo-container">
             <img src="images/logo.png" alt="Logo" class="logo">
